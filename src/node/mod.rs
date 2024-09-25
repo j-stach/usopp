@@ -4,8 +4,13 @@
 pub mod id;
 pub use id::NodeId;
 
-pub struct Node<I: NodeId> {
+pub struct Node<I: NodeId, D> {
     id: I,
+    freq: f32,
+    inner: D,
+    neighbors: Vec<I>,
+    //register: bool
+
     // tbd
     // Node should track changes to the mesh
     // Track node frequencies for neighbors

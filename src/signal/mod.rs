@@ -15,7 +15,7 @@ pub use self::{
 };
 
 
-pub struct Package<I: NodeId> {
+pub struct Packet<I: NodeId> {
     sender: I,
     recipient: I,
     signal: Signal,
@@ -36,7 +36,7 @@ pub enum CoreInstruction {
     IDENTIFY,
     STATUS,
     EXECUTE,
-    ACKNOWLEDGE,
+    ACKNOWLEDGE(bool),
     RELAY,
     ROUTE,
 }
