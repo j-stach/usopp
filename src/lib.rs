@@ -13,6 +13,9 @@ pub mod comms;
 /// Traits for building radio hardware interfaces.
 pub mod hw;
 
+/// Distributed logic for hive activity and coherency.
+pub mod swarm;
+
 ///// Mesh geometry algorithms. 
 ///// (Structure, routing, movement & physics, healing, etc.)
 ///// Math only, no signals sent here.
@@ -22,8 +25,6 @@ pub mod hw;
 ///// (Triangulation, relay, maneuvering, replacement, etc.)
 ////pub mod hive;
 //
-///// Distributed logic for hive activity and coherency.
-////pub mod swarm;
 //
 ///// Centrally-coordinated logic for swarm activity.
 ///// Calculates the tree of drone instructions and maneuvers to execute.

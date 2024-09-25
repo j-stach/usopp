@@ -1,6 +1,8 @@
 
 // Signal types depend on node capabilities
 
+use crate::swarm::Register;
+
 pub mod id;
 pub use id::NodeId;
 
@@ -9,6 +11,7 @@ pub struct Node<I: NodeId, D> {
     freq: f32,
     inner: D,
     neighbors: Vec<I>,
+    register: Register<I>
     //register: bool
 
     // tbd
@@ -23,3 +26,7 @@ pub struct Node<I: NodeId, D> {
 // Energy management as part of node type?
 
 // Configuration for node hw
+
+
+
+
